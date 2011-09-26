@@ -9,11 +9,11 @@ Created by [Joel Ray](https://github.com/joelray).
 ### Basic Usage
 
 <code>
-Out.registerEngine(Trace.getInstance());
-Out.filterLevel = Out.DEBUG;
-Out.filterByEquality = false;
-Out.clear();
-Out.info(this, "A simple log setup!");
+	Out.registerEngine(Trace.getInstance());
+	Out.filterLevel = Out.DEBUG;
+	Out.filterByEquality = false;
+	Out.clear();
+	Out.info(this, "A simple log setup!");
 </code>
 
 
