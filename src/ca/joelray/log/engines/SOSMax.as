@@ -24,6 +24,7 @@
  **/
 package ca.joelray.log.engines {
 
+	import flash.events.IOErrorEvent;
 	import ca.joelray.log.vo.SOSFoldVO;
 	import ca.joelray.log.utils.Stringifier;
 	import ca.joelray.patterns.singleton.LazySingleton;
@@ -102,6 +103,7 @@ package ca.joelray.log.engines {
 				if(!_socket) {
 					_socket = new XMLSocket();
 					_socket.addEventListener(Event.CONNECT, _onSocketConnected);
+					_socket.addEventListener(IOErrorEvent.IO_ERROR, _onSocketConnectionError);
 					_socket.connect(_host, _port);
 				}
 			}
@@ -120,6 +122,12 @@ package ca.joelray.log.engines {
 			for each(var s:String in _buffer) _sendCommand(s);
 			_buffer = new Array();
 		}
+		
+		
+		/**
+		 * @private
+		 */
+		private function _onSocketConnectionError($evt:IOErrorEvent):void {}
 		
 	}
 }
