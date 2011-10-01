@@ -88,7 +88,6 @@ package ca.joelray.log.engines {
 		 */
 		override public function clear():void {
 			_send(CLEAR_OPERATION, 0, 0x000000);
-		//	Debug.clear();
 		}
 		
 		
