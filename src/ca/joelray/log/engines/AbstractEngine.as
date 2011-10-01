@@ -36,9 +36,7 @@ package ca.joelray.log.engines {
 		 * Clears current log messages.
 		 * The engine, Trace, is not currently supported.
 		 */
-		public function clear():void {
-			
-		}
+		public function clear():void {}
 		
 		
 		/**

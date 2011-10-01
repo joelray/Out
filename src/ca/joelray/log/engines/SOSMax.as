@@ -24,12 +24,13 @@
  **/
 package ca.joelray.log.engines {
 
-	import flash.events.IOErrorEvent;
-	import ca.joelray.log.vo.SOSFoldVO;
 	import ca.joelray.log.utils.Stringifier;
+	import ca.joelray.log.vo.SOSFoldVO;
 	import ca.joelray.patterns.singleton.LazySingleton;
 
 	import flash.events.Event;
+	import flash.events.IOErrorEvent;
+	import flash.events.SecurityErrorEvent;
 	import flash.net.XMLSocket;
 	
 	/**
@@ -103,7 +104,8 @@ package ca.joelray.log.engines {
 				if(!_socket) {
 					_socket = new XMLSocket();
 					_socket.addEventListener(Event.CONNECT, _onSocketConnected);
-					_socket.addEventListener(IOErrorEvent.IO_ERROR, _onSocketConnectionError);
+					_socket.addEventListener(IOErrorEvent.IO_ERROR, _onSocketConnectionIOError);
+					_socket.addEventListener(SecurityErrorEvent.SECURITY_ERROR, _onSocketConnectionSecurityError);
 					_socket.connect(_host, _port);
 				}
 			}
@@ -127,7 +129,13 @@ package ca.joelray.log.engines {
 		/**
 		 * @private
 		 */
-		private function _onSocketConnectionError($evt:IOErrorEvent):void {}
+		private function _onSocketConnectionIOError($evt:IOErrorEvent):void {}
+		
+		
+		/**
+		 * @private
+		 */
+		private function _onSocketConnectionSecurityError($evt:SecurityErrorEvent):void {}
 		
 	}
 }

@@ -10,14 +10,19 @@ Created by [Joel Ray](https://github.com/joelray).
 
 <pre>
 Out.registerEngine(Trace.getInstance());
-Out.filterLevel = Out.DEBUG;
-Out.filterByEquality = false;
-Out.clear();
 Out.info(this, "A simple log setup!");
 </pre>
 
 
 ### Change Log ###
+
+
+2011 10 01 - **r2**
+
+* General comments cleanup.
+* Removed internal Debug class from Arthropod.
+* Merged core contents of the Debug class into Arthropod.
+* Removed unused properties and color values from Arthropod.
 
 
 2011 09 25 - **r1**

@@ -52,7 +52,7 @@ package ca.joelray.log {
 		// Static Properties 
 		public static var active           : Boolean = true;            // Is this son-of-a-bitch activated?
 		public static var filterByEquality : Boolean = false;           // Only reveal log values from the base filter level.
-		public static var filterLevel      : uint = 0;                  // The base filter level. Anything log level below this will be ignored.
+		public static var filterLevel      : uint = 0;                  // The base filter level. Any log level below this will be ignored.
 		
 		private static var __levels        : Dictionary;                // The log level's string values.
 		private static var __engines       : Array  = new Array();      // Activated log engines.
@@ -242,7 +242,7 @@ package ca.joelray.log {
 		}
 
 		
-		/**
+		/** 
 		 * Gets a class name devoid of any colons and package details.
 		 */
 		private static function __getClassName($o:*):String {
