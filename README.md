@@ -23,6 +23,7 @@ Out.info(this, "A simple log setup!");
 * Removed internal Debug class from Arthropod.
 * Merged core contents of the Debug class into Arthropod.
 * Removed unused properties and color values from Arthropod.
+* Added a SecurityError handler to SOSMax.
 
 
 2011 09 25 - **r1**
