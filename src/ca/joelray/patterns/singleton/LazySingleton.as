@@ -37,8 +37,8 @@ package ca.joelray.patterns.singleton {
 	 */
 	public class LazySingleton {
 		
-		private static var __allowBuild		: Dictionary = new Dictionary();
-		private static var __stack			: Dictionary = new Dictionary();
+		private static var __allowBuild     : Dictionary = new Dictionary();
+		private static var __stack          : Dictionary = new Dictionary();
 		
 		// ===========================================================================================================================
 		// PUBLIC STATIC INTERFACE ---------------------------------------------------------------------------------------------------
