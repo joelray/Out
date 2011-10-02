@@ -45,7 +45,7 @@ package ca.joelray.patterns.singleton {
 
 		public static function validate($class:Class):void {
 			if(!__allowBuild[$class] || __stack[$class]) {
-				throw new Error("Singleton error - Cannot instantiate a singleton from outside, use getInstance()");
+				throw new Error("LazySingleton error: Cannot instantiate a singleton from outside, use getInstance()");
 			}
 		}
 		
